@@ -23,6 +23,7 @@ const MainHeder = styled.header`
   justify-content: center;
   align-items: center;
   gap: 40px;
+  margin-bottom: 80px;
 
   h1 {
     font-size: 32px;
