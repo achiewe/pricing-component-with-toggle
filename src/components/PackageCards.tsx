@@ -48,6 +48,7 @@ const PackageMain = styled.div`
   @media (min-width: 1024px) {
     flex-direction: row;
     gap: 0;
+    margin-bottom: 103.5px;
   }
 `;
 
