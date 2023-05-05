@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import CreatedCard from "./Card";
 
-const PackageCards = (): JSX.Element => {
+interface Props {
+  changeInput: boolean;
+}
+
+const PackageCards = ({ changeInput }: Props): JSX.Element => {
   return (
     <PackageMain>
       <CreatedCard
         Type="Basic"
-        Price="19.99"
+        Price={changeInput ? "19.99" : "199.99"}
         GB="500 GB Storage"
         Users="2 Users Allowed"
         SendGB="Send up to 3 GB"
@@ -14,7 +18,7 @@ const PackageCards = (): JSX.Element => {
       />
       <CreatedCard
         Type="Professional"
-        Price="24.99"
+        Price={changeInput ? "24.99" : "249.99"}
         GB="1 TB Storage"
         Users="5 Users Allowed"
         SendGB="Send up to 10 GB"
@@ -23,7 +27,7 @@ const PackageCards = (): JSX.Element => {
 
       <CreatedCard
         Type="Master"
-        Price="39.99"
+        Price={changeInput ? "39.99" : "399.99"}
         GB="2 TB Storage"
         Users="10 Users Allowed"
         SendGB="Send up to 20 GB"

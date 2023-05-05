@@ -11,7 +11,7 @@ function App(): JSX.Element {
     <StyledMain>
       <GlobalStyles />
       <HeaderToggle changeInput={changeInput} setChangeInput={setChangeInput} />
-      <PackageCards />
+      <PackageCards changeInput={changeInput} />
     </StyledMain>
   );
 }

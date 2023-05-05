@@ -9,7 +9,6 @@ const HeaderToggle = ({ changeInput, setChangeInput }: Props): JSX.Element => {
   const handleChange = () => {
     setChangeInput(!changeInput);
   };
-  console.log(handleChange, "sheicvala");
   return (
     <MainHeder>
       <h1>Our Pricing</h1>
