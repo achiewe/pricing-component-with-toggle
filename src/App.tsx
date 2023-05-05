@@ -1,6 +1,7 @@
 import GlobalStyles from "./GlobalStyles";
 import styled from "styled-components";
 import BgTop from "../src/images/bg-top.svg";
+import BgBottom from "../src/images/bg-bottom.svg";
 import HeaderToggle from "./components/HeaderToggle";
 import PackageCards from "./components/PackageCards";
 import { useState } from "react";
@@ -27,6 +28,12 @@ const StyledMain = styled.div`
   background-image: url(${BgTop});
   background-repeat: no-repeat;
   background-position: top -20px right -200px;
+  @media (min-width: 1024px) {
+    padding: 0;
+    background-image: url(${BgTop}), url(${BgBottom});
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 0px right -100px, bottom 0px left 0px;
+  }
 `;
 
 export default App;

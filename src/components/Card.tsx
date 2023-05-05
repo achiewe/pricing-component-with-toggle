@@ -52,6 +52,9 @@ const Card = styled.div<{ background: string }>`
   background: ${(props) => props.background};
   border-radius: 10px;
   box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+  @media (min-width: 1024px) {
+    width: 350px;
+  }
   .TopCard-div {
     display: flex;
     flex-direction: column;

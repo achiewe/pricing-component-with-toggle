@@ -37,6 +37,10 @@ const MainHeder = styled.header`
   gap: 40px;
   margin-bottom: 80px;
   margin-top: 64px;
+  @media (min-width: 1024px) {
+    margin-bottom: 64.5px;
+    margin-top: 71px;
+  }
 
   h1 {
     font-size: 32px;

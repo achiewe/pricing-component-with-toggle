@@ -45,6 +45,10 @@ const PackageMain = styled.div`
   align-items: center;
   gap: 32.5px;
   margin-bottom: 71px;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 0;
+  }
 `;
 
 export default PackageCards;
