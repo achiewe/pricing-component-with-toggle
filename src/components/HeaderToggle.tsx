@@ -78,6 +78,9 @@ const MainHeder = styled.header`
     border-radius: 16px;
     position: relative;
     display: inline-block;
+    :hover {
+      opacity: 0.5;
+    }
   }
 
   label input {

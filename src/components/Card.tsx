@@ -166,6 +166,24 @@ const Card = styled.div<{ background: string }>`
       "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
         ? "#6D72DE"
         : "#FFFFFF"};
+    :hover {
+      background: ${(props) =>
+        props.background ===
+        "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+          ? "linear-gradient(135deg, #A2A7F0 0.05%, #696EDD 100.05%)"
+          : "#FFFFFF"};
+      cursor: pointer;
+      color: ${(props) =>
+        props.background ===
+        "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+          ? "#FFFFFF"
+          : "#6D72DE"};
+      border: ${(props) =>
+        props.background ===
+        "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+          ? " 1px solid #FFFFFF"
+          : "1px solid #6D72DE"};
+    }
   }
 `;
 
