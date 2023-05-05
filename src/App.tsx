@@ -33,7 +33,7 @@ const StyledMain = styled.div`
     padding: 0;
     background-image: url(${BgTop}), url(${BgBottom});
     background-repeat: no-repeat, no-repeat;
-    background-position: top 0px right -100px, bottom 0px left 0px;
+    background-position: top 20px right 0px, bottom 0px left 0px;
   }
 `;
 
