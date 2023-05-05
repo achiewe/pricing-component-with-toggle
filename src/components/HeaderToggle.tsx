@@ -1,13 +1,26 @@
 import styled from "styled-components";
 
-const HeaderToggle = (): JSX.Element => {
+interface Props {
+  changeInput: boolean;
+  setChangeInput(changeInput: boolean): void;
+}
+
+const HeaderToggle = ({ changeInput, setChangeInput }: Props): JSX.Element => {
+  const handleChange = () => {
+    setChangeInput(!changeInput);
+  };
+  console.log(handleChange, "sheicvala");
   return (
     <MainHeder>
       <h1>Our Pricing</h1>
       <div>
         <h3>Annually</h3>
         <label>
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={changeInput}
+            onChange={handleChange}
+          />
           <span className="slider"></span>
         </label>
         <h3>Monthly</h3>
@@ -24,6 +37,7 @@ const MainHeder = styled.header`
   align-items: center;
   gap: 40px;
   margin-bottom: 80px;
+  margin-top: 64px;
 
   h1 {
     font-size: 32px;
@@ -87,7 +101,7 @@ const MainHeder = styled.header`
     content: "";
     height: 24px;
     width: 24px;
-    left: 6px;
+    left: 25px;
     bottom: 4px;
     background-color: #ffffff;
     -webkit-transition: 0.4s;
@@ -96,9 +110,9 @@ const MainHeder = styled.header`
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    transform: translateX(20px);
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
     background-color: #ffffff;
   }
 `;

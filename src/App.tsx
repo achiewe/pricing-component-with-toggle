@@ -3,12 +3,14 @@ import styled from "styled-components";
 import BgTop from "../src/images/bg-top.svg";
 import HeaderToggle from "./components/HeaderToggle";
 import PackageCards from "./components/PackageCards";
+import { useState } from "react";
 
 function App(): JSX.Element {
+  const [changeInput, setChangeInput] = useState<boolean>(true);
   return (
     <StyledMain>
       <GlobalStyles />
-      <HeaderToggle />
+      <HeaderToggle changeInput={changeInput} setChangeInput={setChangeInput} />
       <PackageCards />
     </StyledMain>
   );
@@ -16,7 +18,6 @@ function App(): JSX.Element {
 
 const StyledMain = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

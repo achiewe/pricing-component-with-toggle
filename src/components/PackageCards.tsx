@@ -40,6 +40,7 @@ const PackageMain = styled.div`
   justify-content: center;
   align-items: center;
   gap: 32.5px;
+  margin-bottom: 71px;
 `;
 
 export default PackageCards;
