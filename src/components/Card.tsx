@@ -54,6 +54,12 @@ const Card = styled.div<{ background: string }>`
   box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
   @media (min-width: 1024px) {
     width: 350px;
+    box-shadow: none;
+    padding: ${(props) =>
+      props.background ===
+      "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+        ? "54.5px 31px"
+        : "31px"};
   }
   .TopCard-div {
     display: flex;
