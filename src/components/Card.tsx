@@ -6,11 +6,19 @@ interface Props {
   GB: String;
   Users: string;
   SendGB: string;
+  background: string;
 }
 
-const CreateCard = ({ Type, Price, GB, Users, SendGB }: Props): JSX.Element => {
+const CreateCard = ({
+  Type,
+  Price,
+  GB,
+  Users,
+  SendGB,
+  background,
+}: Props): JSX.Element => {
   return (
-    <Card>
+    <Card background={background}>
       <div className="TopCard-div">
         <h2>{Type}</h2>
         <h1>
@@ -33,7 +41,7 @@ const CreateCard = ({ Type, Price, GB, Users, SendGB }: Props): JSX.Element => {
   );
 };
 
-const Card = styled.div`
+const Card = styled.div<{ background: string }>`
   width: 327px;
   display: flex;
   flex-direction: column;
@@ -41,7 +49,7 @@ const Card = styled.div`
   align-items: center;
   padding: 31px 29px;
   gap: 32px;
-  background-color: #ffffff;
+  background: ${(props) => props.background};
   border-radius: 10px;
   .TopCard-div {
     display: flex;
@@ -56,7 +64,11 @@ const Card = styled.div`
       line-height: 28px;
       letter-spacing: 0px;
       text-align: center;
-      color: #6e728e;
+      color: ${(props) =>
+        props.background ===
+        "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+          ? "#FFFFFF"
+          : "#6E728E"};
     }
 
     h1 {
@@ -68,7 +80,11 @@ const Card = styled.div`
       line-height: 71px;
       letter-spacing: -2.1600000858306885px;
       text-align: center;
-      color: #4a4d60;
+      color: ${(props) =>
+        props.background ===
+        "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+          ? "#FFFFFF"
+          : "#6E728E"};
 
       span {
         font-size: 40px;
@@ -76,7 +92,11 @@ const Card = styled.div`
         line-height: 49px;
         letter-spacing: -1.2000000476837158px;
         text-align: center;
-        color: #4a4d60;
+        color: ${(props) =>
+          props.background ===
+          "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+            ? "#FFFFFF"
+            : "#6E728E"};
       }
     }
   }
@@ -92,7 +112,11 @@ const Card = styled.div`
     hr {
       width: 100%;
       border: none;
-      background-color: #6e728e;
+      background-color: ${(props) =>
+        props.background ===
+        "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+          ? "#FFFFFF"
+          : "#6E728E"};
       height: 1px;
       opacity: 0.25;
     }
@@ -103,14 +127,22 @@ const Card = styled.div`
       line-height: 28px;
       letter-spacing: 0px;
       text-align: center;
-      color: #6e728e;
+      color: ${(props) =>
+        props.background ===
+        "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+          ? "#FFFFFF"
+          : "#6E728E"};
     }
   }
 
   button {
     width: 100%;
     max-width: 288px;
-    background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+    background: ${(props) =>
+      props.background ===
+      "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+        ? "#FFFFFF"
+        : "linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%)"};
     height: 44px;
     border: none;
     border-radius: 6px;
@@ -119,7 +151,11 @@ const Card = styled.div`
     line-height: 16px;
     letter-spacing: 1.3928571939468384px;
     text-align: center;
-    color: #ffffff;
+    color: ${(props) =>
+      props.background ===
+      "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
+        ? "#6D72DE"
+        : "#FFFFFF"};
   }
 `;
 
